@@ -4,7 +4,7 @@ import { Button} from '@/components/ui/button';
 
 
 import './App.css'
-import { Form } from './components/ui/form';
+// import { Form } from './components/ui/form';
 import { Input } from './components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 
@@ -23,24 +23,22 @@ function ConnectionForm({ onAddConnection }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <Input
-        label="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
       />
       <Input
-        label="Persona"
         value={persona}
         onChange={(e) => setPersona(e.target.value)}
         placeholder="e.g., 5-year-old, grandmother"
         required
       />
-      <Button type="submit" variant="primary">
+      <Button type="submit" variant="default">
         Add Connection
       </Button>
-    </Form>
+    </form>
   );
 }
 
